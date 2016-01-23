@@ -13,9 +13,55 @@
 
 Route::get('/', function () {
 
-	throw new Exception("Tracy work!!!");
-	
-    //return view('welcome');
+	//throw new Exception("Tracy work!!!");
+	//return 'welcome';
+    return view('welcome');
+});
+
+
+
+Route::get('hello', function(){
+
+	return 'hello so hello';
+
+});
+
+
+Route::get('dashboard', function(){
+
+	return 'dashboard';
+
+});
+
+
+Route::group(['prefix' => 'admin'], function(){
+	Route::get('dashboard', function(){
+
+		return 'admin dashboard';
+
+	});
+});
+
+/*Route::get('hello/{id}', function($id){
+
+	return 'post: '.$id;
+
+})
+->where('id','[0-9]+');*/
+
+
+Route::get('post/{id}', ['as' => 'posts.show',  function($id){
+
+	return 'post: '.$id;
+
+}]);
+
+
+
+Route::get('hello/{name?}', function($name = 'everybody'){
+
+	return 'hello, '.$name;
+
 });
 
 /*
