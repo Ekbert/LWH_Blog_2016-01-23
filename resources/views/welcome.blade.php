@@ -39,7 +39,6 @@
         <div class="container">
             <div class="content">
                 <div class="title">Laravel 5</div>
-                <a href="{{ route('posts.show',1) }}">Link</a>
             </div>
         </div>
     </body>
