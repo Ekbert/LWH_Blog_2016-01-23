@@ -28,6 +28,38 @@ Route::get('/hello', function () {
 });
 
 
+Route::get('/about', function () {
+
+	//throw new Exception("Tracy work!!!");
+	//return 'welcome';
+    return view('about');
+});
+
+
+Route::get('/services', function () {
+
+	//throw new Exception("Tracy work!!!");
+	//return 'welcome';
+    return view('services');
+});
+
+
+Route::get('/portfolio', function () {
+
+	//throw new Exception("Tracy work!!!");
+	//return 'welcome';
+    return view('portfolio');
+});
+
+
+Route::get('/contact', function () {
+
+	//throw new Exception("Tracy work!!!");
+	//return 'welcome';
+    return view('contact');
+});
+
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
